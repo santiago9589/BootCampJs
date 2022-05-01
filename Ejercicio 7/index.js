@@ -1,38 +1,44 @@
 class Figura{
-    #color = "verde"
-
-    get color(){
-        console.log("El colo es : "+this.#color)
-    
+    constructor(color){     
+        this._color = color
     }
-
-    set  color(color){
-        this.#color = color
+    get color(){
+        return this._color
+    }
+    set color(color){
+        this._color = color
     }
 }
 
 class Circulo extends Figura{
-
-    constructor(radio,color){
-        super()
-        this.radio=radio;
-        this.color=color
+    constructor(radio, color){
+        super(color);
+        this._radio = radio;
     }
-
-    
-
-
+    get radio() {
+        return this._radio;
+    }
+    set radio(radio) {
+        this._radio = radio;
+    }
 }
 
-class Rectángulo extends Figura{
-    constructor(base,altura,color){
-        super()
-        this.base=base;
-        this.altura=altura;
-        this.color=color
+class Rectangulo extends Figura{
+    constructor(base, altura, color){
+        super(color);
+        this._base = base;
+        this._altura = altura;
     }
-
+    get base() {
+        return this._base;
+    }
+    set base(base) {
+        this._base = base;
+    }
+    get altura() {
+        return this._altura;
+    }
+    set altura(altura) {
+        this._altura = altura;
+    }
 }
-
-
-
