@@ -8,6 +8,10 @@ class Figura{
     set color(color){
         this._color = color
     }
+
+    calcularArea(){
+        return -1
+    }
 }
 
 class Circulo extends Figura{
@@ -20,6 +24,10 @@ class Circulo extends Figura{
     }
     set radio(radio) {
         this._radio = radio;
+    }
+
+    calcularArea(){
+        return (Math.PI*Math.pow(this._radio,2)).toFixed(2);
     }
 }
 
@@ -41,4 +49,9 @@ class Rectangulo extends Figura{
     set altura(altura) {
         this._altura = altura;
     }
+
+    calcularArea(){
+        return ((this._base*this._altura)/2)
+    }
 }
+
